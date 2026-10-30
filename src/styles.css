@@ -1,0 +1,68 @@
+:root{--ink:#14213d;--muted:#5c6577;--bg:#f6f7fb;--card:#fff;--line:#d5d9e4;--brand:#2563eb;--yes:#15803d;--no:#b45309;--hum:#7c3aed}
+*{box-sizing:border-box}html{scroll-padding-top:70px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--brand)}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
+.top{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:12px 32px;background:var(--ink)}
+.top a{color:#fff;text-decoration:none;font-weight:600}.top nav{display:flex;gap:20px}.top nav a{font-weight:400;opacity:.85}
+main{max-width:1100px;margin:0 auto;padding:32px 24px}section{margin-bottom:56px}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0}h2{font-size:1.6rem;margin:0 0 16px}h3{margin:.4em 0}
+.eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--brand);font-weight:700;margin:0}.muted{color:var(--muted)}
+.hero{display:flex;gap:32px;align-items:center;background:var(--card);padding:32px;border-radius:16px;border:1px solid var(--line)}
+.logo{width:280px;height:280px;border-radius:16px;object-fit:contain;flex:none}
+.logo-fallback{flex:none;padding:24px;border:2px dashed var(--line);border-radius:12px;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+blockquote{margin:12px 0;padding:10px 16px;border-left:4px solid var(--brand);background:#eef3ff;border-radius:0 8px 8px 0}
+.ficha{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.ficha div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;font-size:.92rem}.ficha b{display:block;color:var(--brand);font-size:.78rem;text-transform:uppercase}
+.flow{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.casos{border:0;padding:0;min-width:0;margin:0 0 20px}
+.casos legend{font-weight:600;margin-bottom:8px}
+.casos-opciones{display:flex;gap:10px;flex-wrap:wrap}
+.casos button{font:inherit;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer}
+.casos button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.seq{display:flex;flex-direction:column;align-items:center;width:100%}.arrow{font-size:1.4rem;line-height:1.2;color:var(--muted)}
+.node{width:100%;max-width:420px;text-align:center;padding:10px 16px;border:2px solid var(--ink);border-radius:10px;background:#fff}
+.node small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.n-start,.n-end{border-radius:999px;background:var(--ink);color:#fff}.n-start small,.n-end small{color:#cbd5e1}
+.n-tool{border-color:var(--brand);background:#eef3ff}.n-human{border-color:var(--hum);background:#f3edff}
+.n-decision{border-color:var(--no);background:#fff7e6;font-weight:700;border-radius:6px}
+.design{border-style:dashed}
+.branches{display:grid;grid-template-columns:1fr 1fr;gap:24px;width:100%;margin-top:4px}
+.branch{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px;border-radius:12px;transition:opacity .25s}.branch.off{opacity:.3}
+.tag{padding:2px 14px;border-radius:999px;color:#fff;font-size:.85rem}.tag.yes{background:var(--yes)}.tag.no{background:var(--no)}
+.leyenda{margin:20px 0 0;font-size:.85rem;color:var(--muted);text-align:center}.design-dot{display:inline-block;width:14px;height:14px;border:2px dashed var(--muted);border-radius:4px;vertical-align:-2px}
+.detalles{margin-top:16px;display:grid;gap:8px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:4px 16px}
+summary{cursor:pointer;font-weight:600;padding:10px 0}details p{margin:0 0 12px}
+footer{text-align:center;padding:32px;color:var(--muted);font-size:.85rem}
+
+@media (max-width:800px){
+  .top{padding:12px 20px;gap:12px}
+  .top nav{gap:12px}
+  main{padding:28px 20px}
+  .hero{gap:24px;padding:24px}
+  .logo{width:220px;height:220px}
+  .grid2{grid-template-columns:1fr}
+  .ficha{grid-template-columns:1fr}
+}
+
+@media (max-width:600px){
+  html{scroll-padding-top:120px}
+  .top{align-items:flex-start;flex-direction:column;padding:12px 16px}
+  .top nav{width:100%;flex-wrap:wrap;gap:6px 16px}
+  .top nav a{padding:2px 0}
+  main{padding:24px 16px}
+  section{margin-bottom:40px}
+  h1{font-size:1.8rem}
+  h2{font-size:1.4rem}
+  .hero{align-items:flex-start;flex-direction:column;padding:20px}
+  .logo{width:min(100%,200px);height:auto;aspect-ratio:1}
+  .card,.flow{padding:18px}
+  .branches{grid-template-columns:1fr;gap:12px}
+  .node{overflow-wrap:anywhere}
+  .casos-opciones{align-items:flex-start;flex-direction:column}
+  .casos button{max-width:100%;text-align:left}
+  footer{padding:24px 16px}
+}
