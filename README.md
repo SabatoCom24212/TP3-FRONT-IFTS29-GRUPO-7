@@ -22,7 +22,9 @@
 |-----------------------------------------------|------------------------------------|----------------------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Copilot en Visual Studio Code (plan gratuito) | GPT-6 Luna                         | Asistencia para crear, depurar y mejorar el sitio. | Layout según la consigna; corrección de renderizado y navegación; diseño responsive; formato del README. |
 
-### Evidencia de iteración
+### Evidencia de iteración — Ángel Sabato
+
+Las capturas que siguen corresponden a la iteración realizada por Ángel Sabato.
 
 Primera versión del sitio → se detectaron errores de renderizado, enlaces del Header que no navegaban y problemas de adaptación a pantallas chicas → se solicitaron correcciones de navegación y responsive → se corrigió el renderizado, se repararon los enlaces con HashRouter, se adaptó el layout a distintos anchos de pantalla y se ajustó el formato de las tablas del README.
 
