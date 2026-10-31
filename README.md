@@ -12,15 +12,18 @@
 
 ## Integrantes y aportes
 
-| Integrante   | Aporte concreto                                                                                              |
-|--------------|--------------------------------------------------------------------------------------------------------------|
+| Integrante | Aporte concreto |
+| --- | --- |
 | Ángel Sabato | Inició el proyecto, creó la primera versión y corrigió el renderizado, la navegación y el diseño responsive. |
+| Flavio Rinaldi | Incorporó favicon SVG personalizado, optimizó metadatos/SEO en HTML e implementó botón interactivo «Volver arriba» para mejor UX. |
 
 ## Herramientas de IA
 
-| Aplicación                                    | Modelo                             | Uso                                                | Cambios solicitados                                                                                      |
-|-----------------------------------------------|------------------------------------|----------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Copilot en Visual Studio Code (plan gratuito) | GPT-6 Luna                         | Asistencia para crear, depurar y mejorar el sitio. | Layout según la consigna; corrección de renderizado y navegación; diseño responsive; formato del README. |
+| Aplicación | Modelo | Uso | Cambios solicitados |
+| --- | --- | --- | --- |
+| Copilot en Visual Studio Code (plan gratuito) | GPT-6 Luna | Asistencia para crear, depurar y mejorar el sitio. | Layout según la consigna; corrección de renderizado y navegación; diseño responsive; formato del README. |
+| Gemini / AI Assistant | Gemini 2.5 Flash / Pro | Asistencia para optimización SEO, UX y favicon. | Favicon vectorial de NEXO, metadatos en HTML y botón flotante de Scroll to Top en React. |
+
 
 ### Evidencia de iteración — Ángel Sabato
 

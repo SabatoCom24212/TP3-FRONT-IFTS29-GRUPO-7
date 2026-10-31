@@ -1,11 +1,10 @@
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
 import gsap from "gsap";
 import Flow from "./Flow.jsx";
 import { propuestas, startup } from "./data.js";
 
 function Logo() {
-  // El logo original de la startup va en /public/logo-nexo.png (ver README).
   return (
     <img
       className="logo"
@@ -31,6 +30,42 @@ function SectionLink({ id, children }) {
     >
       {children}
     </Link>
+  );
+}
+
+function ScrollToTopButton() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisible = () => {
+      if (window.scrollY > 300) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+    window.addEventListener("scroll", toggleVisible);
+    return () => window.removeEventListener("scroll", toggleVisible);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  if (!visible) return null;
+
+  return (
+    <button
+      onClick={scrollToTop}
+      className="scroll-to-top"
+      aria-label="Volver arriba"
+      title="Volver arriba"
+    >
+      ↑
+    </button>
   );
 }
 
@@ -105,6 +140,7 @@ function Home() {
           </div>
         </section>
       ))}
+      <ScrollToTopButton />
     </main>
   );
 }

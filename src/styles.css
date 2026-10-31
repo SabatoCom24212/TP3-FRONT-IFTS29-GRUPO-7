@@ -38,31 +38,54 @@ details{background:var(--card);border:1px solid var(--line);border-radius:10px;p
 summary{cursor:pointer;font-weight:600;padding:10px 0}details p{margin:0 0 12px}
 footer{text-align:center;padding:32px;color:var(--muted);font-size:.85rem}
 
+/* Botón flotante Scroll to Top */
+.scroll-to-top {
+position: fixed;
+bottom: 24px;
+right: 24px;
+width: 44px;
+height: 44px;
+border-radius: 50%;
+background: var(--brand);
+color: #fff;
+border: none;
+font-size: 1.2rem;
+font-weight: bold;
+cursor: pointer;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+z-index: 10;
+transition: transform 0.2s, background-color 0.2s;
+}
+.scroll-to-top:hover {
+background: var(--ink);
+transform: translateY(-2px);
+}
+
 @media (max-width:800px){
-  .top{padding:12px 20px;gap:12px}
-  .top nav{gap:12px}
-  main{padding:28px 20px}
-  .hero{gap:24px;padding:24px}
-  .logo{width:220px;height:220px}
-  .grid2{grid-template-columns:1fr}
-  .ficha{grid-template-columns:1fr}
+.top{padding:12px 20px;gap:12px}
+.top nav{gap:12px}
+main{padding:28px 20px}
+.hero{gap:24px;padding:24px}
+.logo{width:220px;height:220px}
+.grid2{grid-template-columns:1fr}
+.ficha{grid-template-columns:1fr}
 }
 
 @media (max-width:600px){
-  html{scroll-padding-top:120px}
-  .top{align-items:flex-start;flex-direction:column;padding:12px 16px}
-  .top nav{width:100%;flex-wrap:wrap;gap:6px 16px}
-  .top nav a{padding:2px 0}
-  main{padding:24px 16px}
-  section{margin-bottom:40px}
-  h1{font-size:1.8rem}
-  h2{font-size:1.4rem}
-  .hero{align-items:flex-start;flex-direction:column;padding:20px}
-  .logo{width:min(100%,200px);height:auto;aspect-ratio:1}
-  .card,.flow{padding:18px}
-  .branches{grid-template-columns:1fr;gap:12px}
-  .node{overflow-wrap:anywhere}
-  .casos-opciones{align-items:flex-start;flex-direction:column}
-  .casos button{max-width:100%;text-align:left}
-  footer{padding:24px 16px}
+html{scroll-padding-top:120px}
+.top{align-items:flex-start;flex-direction:column;padding:12px 16px}
+.top nav{width:100%;flex-wrap:wrap;gap:6px 16px}
+.top nav a{padding:2px 0}
+main{padding:24px 16px}
+section{margin-bottom:40px}
+h1{font-size:1.8rem}
+h2{font-size:1.4rem}
+.hero{align-items:flex-start;flex-direction:column;padding:20px}
+.logo{width:min(100%,200px);height:auto;aspect-ratio:1}
+.card,.flow{padding:18px}
+.branches{grid-template-columns:1fr;gap:12px}
+.node{overflow-wrap:anywhere}
+.casos-opciones{align-items:flex-start;flex-direction:column}
+.casos button{max-width:100%;text-align:left}
+footer{padding:24px 16px}
 }
