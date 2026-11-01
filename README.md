@@ -1,7 +1,7 @@
 # TP3 · Dos sentencias. Dos soluciones. — Grupo 7 (IFTS 29)
 
-- **Landing publicada:** _(completar con el enlace)_
-- **Repositorio:** _(completar con el enlace)_
+- **Landing publicada:** <https://tp-3-front-ifts-29-grupo-7.vercel.app/>
+- **Repositorio:** <https://github.com/SabatoCom24212/TP3-FRONT-IFTS29-GRUPO-7>
 
 ## Asignación
 
@@ -23,7 +23,6 @@
 | --- | --- | --- | --- |
 | Copilot en Visual Studio Code (plan gratuito) | GPT-6 Luna | Asistencia para crear, depurar y mejorar el sitio. | Layout según la consigna; corrección de renderizado y navegación; diseño responsive; formato del README. |
 | Gemini / AI Assistant | Gemini 2.5 Flash / Pro | Asistencia para optimización SEO, UX y favicon. | Favicon vectorial de NEXO, metadatos en HTML y botón flotante de Scroll to Top en React. |
-
 
 ### Evidencia de iteración — Ángel Sabato
 
@@ -71,7 +70,7 @@ Stack: React, react-router-dom (HashRouter), GSAP, Vite, oxlint.
 
 ## Comprobación
 
-- [ ] Repositorio y landing abren desde una ventana sin sesión (pendiente: completar los enlaces públicos).
+- [x] Completar los enlaces públicos.
 - [x] Logo completo; ambos diagramas legibles en desktop.
 - [x] Desplegables abren/cierran con clic, Enter y Espacio.
 - [x] Cada flujo recorrido con un caso que cumple y otro que no.
