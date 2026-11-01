@@ -53,6 +53,10 @@ Segunda versión del sitio → falta de metadatos SEO, favicon genérico y neces
 
 ![Captura de la iteración 2](evidencia/Captura%20de%20pantalla%202026-10-31%202.png)
 
+![Captura de la iteración 2](evidencia/Captura%20de%20pantalla%202026-10-31%203.png)
+
+![Captura de la iteración 2](evidencia/Captura%20de%20pantalla%202026-10-31%204.png)
+
 ## Logo de la startup
 
 El **logo original de NEXO** (del material asignado) está en `public/logo-nexo.png`. Ya está incluido (S11.webp convertido a PNG).
