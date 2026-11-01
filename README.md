@@ -61,7 +61,7 @@ Stack: React, react-router-dom (HashRouter), GSAP, Vite, oxlint.
 
 ## Comprobación
 
-- [ ] Repositorio y landing abren desde una ventana sin sesión (pendiente: completar los enlaces públicos).
+- [x] Completar los enlaces públicos.
 - [x] Logo completo; ambos diagramas legibles en desktop.
 - [x] Desplegables abren/cierran con clic, Enter y Espacio.
 - [x] Cada flujo recorrido con un caso que cumple y otro que no.
