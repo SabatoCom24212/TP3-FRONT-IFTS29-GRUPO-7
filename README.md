@@ -1,7 +1,7 @@
 # TP3 · Dos sentencias. Dos soluciones. — Grupo 7 (IFTS 29)
 
-- **Landing publicada:** _(completar con el enlace)_
-- **Repositorio:** _(completar con el enlace)_
+- **Landing publicada:** <https://tp-3-front-ifts-29-grupo-7.vercel.app/>
+- **Repositorio:** <https://github.com/SabatoCom24212/TP3-FRONT-IFTS29-GRUPO-7>
 
 ## Asignación
 
