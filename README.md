@@ -24,7 +24,6 @@
 | Copilot en Visual Studio Code (plan gratuito) | GPT-6 Luna | Asistencia para crear, depurar y mejorar el sitio. | Layout según la consigna; corrección de renderizado y navegación; diseño responsive; formato del README. |
 | Gemini / AI Assistant | Gemini 2.5 Flash / Pro | Asistencia para optimización SEO, UX y favicon. | Favicon vectorial de NEXO, metadatos en HTML y botón flotante de Scroll to Top en React. |
 
-
 ### Evidencia de iteración — Ángel Sabato
 
 Las capturas que siguen corresponden a la iteración realizada por Ángel Sabato.
