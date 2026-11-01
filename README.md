@@ -44,7 +44,6 @@ Primera versión del sitio → se detectaron errores de renderizado, enlaces del
 
 ![Captura de la iteración 7](evidencia/Captura%20de%20pantalla%202026-10-30%20192408.png)
 
-
 ### Evidencia de iteración — Flavio Rinaldi
 
 Segunda versión del sitio → falta de metadatos SEO, favicon genérico y necesidad de mejorar la navegación en pantallas extensas → se solicitó la incorporación de favicon personalizado SVG con la identidad visual de NEXO, etiquetas meta para accesibilidad e implementación de un componente interactivo de Scroll to Top → se agregó el favicon vectorial N, la descripción en el HTML y el botón flotante de retorno fluido en React.
