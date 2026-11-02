@@ -53,6 +53,7 @@ function ScrollToTopButton() {
       top: 0,
       behavior: "smooth",
     });
+    document.getElementById("contenido")?.focus({ preventScroll: true });
   };
 
   if (!visible) return null;
@@ -87,7 +88,7 @@ function Home() {
   }, []);
 
   return (
-    <main ref={raiz}>
+    <main id="contenido" ref={raiz} tabIndex="-1">
       <section id="startup" className="hero reveal">
         <Logo />
         <div>
@@ -115,7 +116,9 @@ function Home() {
               <blockquote>{p.sentencia}</blockquote>
               <h3>{p.titulo}</h3>
               <p>{p.beneficio}</p>
-              <SectionLink id={`flujo-${p.id}`}>Ver el diagrama ↓</SectionLink>
+              <SectionLink id={`flujo-${p.id}`}>
+                Ver el diagrama: {p.titulo} <span aria-hidden="true">↓</span>
+              </SectionLink>
             </article>
           ))}
         </div>
@@ -148,6 +151,7 @@ function Home() {
 export default function App() {
   return (
     <>
+      <a className="skip-link" href="#contenido">Saltar al contenido principal</a>
       <header className="top">
         <Link to="/">NEXO · Grupo 7 · IFTS 29</Link>
         <nav>

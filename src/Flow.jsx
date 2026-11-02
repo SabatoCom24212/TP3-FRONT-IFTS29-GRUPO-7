@@ -15,7 +15,7 @@ function Seq({ steps, active }) {
           <span className="arrow" aria-hidden="true">↓</span>
           <div className="branches">
             {["yes", "no"].map((k) => (
-              <div key={k} className={`branch${active && active !== k ? " off" : ""}`}>
+              <div key={k} className={`branch${active === k ? " active" : " off"}`}>
                 <b className={`tag ${k}`}>{k === "yes" ? "SÍ" : "NO"}</b>
                 <Seq steps={s[k]} />
               </div>
@@ -40,6 +40,9 @@ export default function Flow({ propuesta }) {
             </button>
           ))}
         </div>
+        <p className="sr-only" aria-live="polite" role="status">
+          Caso seleccionado: {propuesta.casos[caso]}.
+        </p>
       </fieldset>
       <Seq steps={propuesta.flujo} active={caso} />
       <p className="leyenda"><span className="design-dot" /> Borde punteado: alternativa agregada por el grupo, no definida por la sentencia.</p>
