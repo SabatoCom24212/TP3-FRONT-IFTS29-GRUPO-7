@@ -56,6 +56,39 @@ Segunda versión del sitio → falta de metadatos SEO, favicon genérico y neces
 
 ![Captura de la iteración 2](evidencia/Captura%20de%20pantalla%202026-10-31%204.png)
 
+### Evidencia de iteración — Marcelo Zárate
+
+**Tercera versión del sitio:** incorporación de mejoras de accesibilidad web (a11y) en NEXO a partir de una auditoría asistida por Inteligencia Artificial y de la validación con axe.
+
+**Cambios realizados:**
+
+- Se revisó la estructura semántica y se incorporó un enlace para saltar directamente al contenido principal.
+- Se mejoró la navegación mediante teclado con indicadores de foco visibles y la gestión del foco al volver al inicio.
+- Se verificaron el contraste y la legibilidad de los textos y de los controles interactivos.
+- Se agregó texto alternativo descriptivo al logo y se ocultaron de los lectores de pantalla los elementos decorativos.
+- Los botones de selección de casos informan su estado con `aria-pressed` y anuncian el cambio mediante una región de estado.
+- Se respetan las preferencias del sistema para reducir el movimiento, evitando animaciones y desplazamientos suaves cuando corresponde.
+- Se documentó el proceso de auditoría y se incorporaron las evidencias del análisis asistido por IA y las validaciones con axe.
+
+**Criterio de implementación:** las modificaciones mejoran la accesibilidad sin alterar el diseño, la identidad visual ni las funcionalidades existentes del sitio.
+
+**Evidencias de la auditoría y de las recomendaciones aplicadas:**
+
+![Análisis de accesibilidad WCAG](evidencia/mz-analisis_wcag.png)
+
+![Validación de accesibilidad con axe](evidencia/mz_wcag_con_axe.png)
+
+![Segunda validación de accesibilidad con axe](evidencia/mz-wcag_con_axe_2.png)
+
+![Mejora de accesibilidad 1](evidencia/mz-mejoras_1.png)
+
+![Mejora de accesibilidad 2](evidencia/mz-mejoras_2.png)
+
+![Mejora de accesibilidad 3](evidencia/mz-mejoras_3.png)
+
+![Mejora de accesibilidad 4](evidencia/mz-mejoras_4.png)
+
+![Recomendaciones WCAG](evidencia/mz-wcag_recomendaciones.png)
 ## Logo de la startup
 
 El **logo original de NEXO** (del material asignado) está en `public/logo-nexo.png`. Ya está incluido (S11.webp convertido a PNG).
