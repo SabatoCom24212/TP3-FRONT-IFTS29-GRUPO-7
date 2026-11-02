@@ -16,6 +16,7 @@
 | --- | --- |
 | Ángel Sabato | Inició el proyecto, creó la primera versión y corrigió el renderizado, la navegación y el diseño responsive. |
 | Flavio Rinaldi | Incorporó favicon SVG personalizado, optimizó metadatos/SEO en HTML e implementó botón interactivo «Volver arriba» para mejor UX. |
+| Marcelo Zárate | Auditó la accesibilidad web (a11y) con asistencia de IA e implementó mejoras en navegación, semántica HTML y experiencia de usuarios con tecnologías de asistencia, conservando el diseño original. |
 
 ## Herramientas de IA
 
