@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ChromaField from "./ChromaField.jsx";
 
 const ETIQUETA = { start: "Inicio", tool: "Consulta", decision: "Decisión", action: "Acción", human: "Persona", end: "Resultado" };
 
@@ -44,7 +45,9 @@ export default function Flow({ propuesta }) {
           Caso seleccionado: {propuesta.casos[caso]}.
         </p>
       </fieldset>
-      <Seq steps={propuesta.flujo} active={caso} />
+      <ChromaField>
+        <Seq steps={propuesta.flujo} active={caso} />
+      </ChromaField>
       <p className="leyenda"><span className="design-dot" /> Borde punteado: alternativa agregada por el grupo, no definida por la sentencia.</p>
     </div>
   );
