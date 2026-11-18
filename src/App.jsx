@@ -2,7 +2,17 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
 import gsap from "gsap";
 import Flow from "./Flow.jsx";
+import GooeyNav from "./GooeyNav.jsx";
+import ChromaField from "./ChromaField.jsx";
+import ThemeToggle from "./ThemeToggle.jsx";
 import { propuestas, startup } from "./data.js";
+
+const NAV_ITEMS = [
+  { id: "startup", label: "Startup" },
+  { id: "propuestas", label: "Propuestas" },
+  { id: "flujo-r3", label: "Flujo 1" },
+  { id: "flujo-r4", label: "Flujo 2" },
+];
 
 function Logo() {
   return (
@@ -127,11 +137,13 @@ function Home() {
       {propuestas.map((p, i) => (
         <section id={`flujo-${p.id}`} className="reveal" key={p.id}>
           <h2>Flujo {i + 1}: {p.titulo}</h2>
-          <div className="ficha">
-            <div><b>Datos necesarios</b>{p.ficha.datos}</div>
-            <div><b>Condición</b>{p.ficha.condicion}</div>
-            <div><b>Consecuencia</b>{p.ficha.consecuencia}</div>
-          </div>
+          <ChromaField className="ficha-field">
+            <div className="ficha">
+              <div className="chroma-card" data-kind="tool"><b>Datos necesarios</b>{p.ficha.datos}</div>
+              <div className="chroma-card" data-kind="decision"><b>Condición</b>{p.ficha.condicion}</div>
+              <div className="chroma-card" data-kind="action"><b>Consecuencia</b>{p.ficha.consecuencia}</div>
+            </div>
+          </ChromaField>
           <Flow propuesta={p} />
           <div className="detalles">
             {p.detalles.map(([titulo, texto]) => (
@@ -154,12 +166,10 @@ export default function App() {
       <a className="skip-link" href="#contenido">Saltar al contenido principal</a>
       <header className="top">
         <Link to="/">NEXO · Grupo 7 · IFTS 29</Link>
-        <nav>
-          <SectionLink id="startup">Startup</SectionLink>
-          <SectionLink id="propuestas">Propuestas</SectionLink>
-          <SectionLink id="flujo-r3">Flujo 1</SectionLink>
-          <SectionLink id="flujo-r4">Flujo 2</SectionLink>
-        </nav>
+        <div className="top-right">
+          <GooeyNav items={NAV_ITEMS} />
+          <ThemeToggle />
+        </div>
       </header>
       <Routes>
         <Route path="/" element={<Home />} />
