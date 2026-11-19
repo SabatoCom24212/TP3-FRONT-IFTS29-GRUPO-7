@@ -17,6 +17,7 @@
 | Ángel Sabato | Inició el proyecto, creó la primera versión y corrigió el renderizado, la navegación y el diseño responsive. |
 | Flavio Rinaldi | Incorporó favicon SVG personalizado, optimizó metadatos/SEO en HTML e implementó botón interactivo «Volver arriba» para mejor UX. |
 | Marcelo Zárate | Auditó la accesibilidad web (a11y) con asistencia de IA e implementó mejoras en navegación, semántica HTML y experiencia de usuarios con tecnologías de asistencia, conservando el diseño original. |
+| Iván Ezequiel Shifman | Incorporó modo oscuro, el menú GooeyNav con versión hamburguesa para celular y un efecto tipo ChromaGrid (React Bits) en fichas y diagramas. |
 
 ## Herramientas de IA
 
@@ -24,6 +25,7 @@
 | --- | --- | --- | --- |
 | Copilot en Visual Studio Code (plan gratuito) | GPT-6 Luna | Asistencia para crear, depurar y mejorar el sitio. | Layout según la consigna; corrección de renderizado y navegación; diseño responsive; formato del README. |
 | Gemini / AI Assistant | Gemini 2.5 Flash / Pro | Asistencia para optimización SEO, UX y favicon. | Favicon vectorial de NEXO, metadatos en HTML y botón flotante de Scroll to Top en React. |
+| Claude (claude.ai) | Claude Sonnet 5.5 | Asistencia para el modo oscuro, GooeyNav, ChromaGrid y el menú móvil. | Modo oscuro con `data-theme`; GooeyNav adaptado a react-router; efecto ChromaGrid sobre fichas y diagramas; menú hamburguesa responsive. |
 
 ### Evidencia de iteración — Ángel Sabato
 
@@ -91,6 +93,31 @@ Segunda versión del sitio → falta de metadatos SEO, favicon genérico y neces
 
 ![Recomendaciones WCAG](evidencia/mz-wcag_recomendaciones.png)
 
+### Evidencia de iteración — Iván Ezequiel Shifman
+
+**Cuarta versión del sitio:** modo oscuro, componentes de React Bits y menú responsive, sin agregar dependencias nuevas.
+
+Versión anterior → sólo existía el tema claro, el menú era una lista de enlaces simples y los diagramas no tenían interacción con el mouse → se solicitó un modo oscuro, un menú GooeyNav y un efecto tipo ChromaGrid → se agregaron los tres. Después se detectó que en celular el header quedaba demasiado apretado → se solicitó un menú hamburguesa → en pantallas de hasta 760 px el header muestra el nombre, el botón de tema y un botón de menú que despliega las secciones.
+
+**Cambios realizados:**
+
+- Modo oscuro con botón en el header (`src/theme.jsx` y `src/ThemeToggle.jsx`): respeta la preferencia del sistema, recuerda la elección y evita el parpadeo inicial (script en `index.html`). Los colores pasaron a variables CSS.
+- Menú del header con efecto GooeyNav de React Bits (`src/GooeyNav.jsx`): píldora que se desliza entre secciones, partículas al hacer clic y resaltado de la sección visible al hacer scroll.
+- Efecto tipo ChromaGrid de React Bits (`src/ChromaField.jsx`) sobre las fichas y los dos diagramas: un foco sigue al puntero y cada paso se ilumina con el color de su tipo.
+- Menú hamburguesa en celular (`src/App.jsx` y `src/styles.css`): botón con `aria-expanded` y `aria-controls`, se cierra con Escape y al elegir una sección.
+
+**Criterio de implementación:** no se agregaron librerías nuevas. Se mantienen la accesibilidad del trabajo anterior (foco visible, `aria-pressed`, `aria-current`) y las preferencias de movimiento reducido: sin partículas ni foco animado, y los diagramas se ven completos a color con teclado, pantalla táctil o "reducir movimiento".
+
+![Modo claro con el nuevo menú](evidencia/iv-modo-claro.png)
+
+![Modo oscuro](evidencia/iv-modo-oscuro.png)
+
+![Menú GooeyNav](evidencia/iv-gooey-nav.png)
+
+![Efecto ChromaGrid sobre el diagrama](evidencia/iv-chroma-diagrama.png)
+
+![Menú hamburguesa en celular](evidencia/iv-menu-movil.png)
+
 ## Logo de la startup
 
 El **logo original de NEXO** (del material asignado) está en `public/logo-nexo.png`. Ya está incluido (S11.webp convertido a PNG).
@@ -104,7 +131,7 @@ npm run lint     # oxlint
 npm run build    # genera /dist para publicar
 ```
 
-Stack: React, react-router-dom (HashRouter), GSAP, Vite, oxlint.
+Stack: React, react-router-dom (HashRouter), GSAP, Vite, oxlint. Componentes visuales adaptados de React Bits (GooeyNav, ChromaGrid).
 
 ## Comprobación
 
