@@ -87,10 +87,8 @@ main{padding:28px 20px}
 }
 
 @media (max-width:600px){
-html{scroll-padding-top:120px}
-.top{align-items:flex-start;flex-direction:column;padding:12px 16px}
-.top-right{width:100%;justify-content:space-between}
-.gooey-nav-container ul{flex-wrap:wrap}
+html{scroll-padding-top:76px}
+.top{padding:12px 16px}
 main{padding:24px 16px}
 section{margin-bottom:40px}
 h1{font-size:1.8rem}
@@ -152,3 +150,21 @@ background:radial-gradient(circle 130px at var(--mx,50%) var(--my,50%),color-mix
 .chroma-field.is-chroma .node:hover::before,.chroma-field.is-chroma .chroma-card:hover::before{opacity:1}
 .chroma-field.is-chroma .node:hover,.chroma-field.is-chroma .chroma-card:hover{border-color:var(--chroma)}
 @media (prefers-reduced-motion:no-preference){.node::before,.chroma-card::before{transition:opacity .25s ease}}
+
+/* ---------- Menú hamburguesa (celular) ---------- */
+.menu-toggle{display:none;place-items:center;width:40px;height:40px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;cursor:pointer;flex:none}
+.menu-toggle:hover{background:rgba(255,255,255,.14)}
+@media (max-width:760px){
+.top{flex-wrap:wrap;align-items:center}
+.top>a{order:1;margin-right:auto}
+.top-right{display:contents}
+.theme-toggle{order:2;margin-left:12px}
+.menu-toggle{display:grid;order:3;margin-left:10px}
+.nav-wrap{order:4;flex-basis:100%;display:none}
+.nav-wrap.open{display:block;padding:14px 0 6px}
+.gooey-nav-container{font-size:1.05rem}
+.gooey-nav-container nav{display:block}
+.gooey-nav-container ul{flex-direction:column;gap:4px}
+.gooey-nav-container li a{flex:1;padding:.8em 1.1em}
+.effect{display:none}
+}

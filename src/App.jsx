@@ -68,6 +68,15 @@ function ScrollToTopButton() {
 
   if (!visible) return null;
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e) => e.key === "Escape" && setMenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+
   return (
     <button
       onClick={scrollToTop}
@@ -164,11 +173,37 @@ export default function App() {
   return (
     <>
       <a className="skip-link" href="#contenido">Saltar al contenido principal</a>
-      <header className="top">
-        <Link to="/">NEXO · Grupo 7 · IFTS 29</Link>
+            <header className="top">
+        <Link to="/" onClick={() => setMenuOpen(false)}>NEXO · Grupo 7 · IFTS 29</Link>
         <div className="top-right">
-          <GooeyNav items={NAV_ITEMS} />
+          <div
+            id="menu-principal"
+            className={`nav-wrap${menuOpen ? " open" : ""}`}
+            onClick={(e) => {
+              if (e.target.closest("a")) setMenuOpen(false);
+            }}
+          >
+            <GooeyNav items={NAV_ITEMS} />
+          </div>
           <ThemeToggle />
+          <button
+            type="button"
+            className="menu-toggle"
+            aria-expanded={menuOpen}
+            aria-controls="menu-principal"
+            aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+              <path
+                d={menuOpen ? "M5 5l14 14M19 5L5 19" : "M4 7h16M4 12h16M4 17h16"}
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
         </div>
       </header>
       <Routes>
